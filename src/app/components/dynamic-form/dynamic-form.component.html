@@ -1,0 +1,13 @@
+<div>
+  <form (ngSubmit)='onSubmit()' [formGroup]="form">
+
+    <div *ngFor="let question of questions"  >
+      <app-dynamic-control [question]="question" [form]="form" (changesForm)="changeOnSubmit($event)"></app-dynamic-control>
+      <br>
+    </div>
+
+    <!-- <div class="form-row">
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div> -->
+  </form>
+</div>

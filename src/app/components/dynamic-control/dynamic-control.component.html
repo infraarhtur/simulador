@@ -1,0 +1,196 @@
+<div [formGroup]="form" class="form-horizontal">
+
+  <!-- Modal  Alert alertModal-->
+  <div class="modal fade" id="alertModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header center "> -->
+        <div class="row ">
+          <div class="col-xs-3 col-sm-3 col-md-3 ">
+            <span class="tituloError ">Error</span>
+          </div>
+        </div>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        <!-- </div> -->
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-xs-3 col-sm-3 col-md-3 ">
+              <img #imageError src="./assets/images/Error.png" width="70" height="70">
+
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9  Disclaimer">
+              <label class="Disclaimer"> No podemos cargar la información del simulador. Por favor intenta más tarde</label>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div [ngSwitch]="question.controlType">
+    <div *ngSwitchCase="'textbox'" name="divGrupo" Class="form-group">
+      <div class="col-xs-7 col-sm-7   col-md-6 col-lg-6 ">
+        <label class=" labelsDinamicos">{{question.label}}
+        </label>
+        <button type=button data-toggle="tooltip" title="{{question.tooltip}}" data-placement="bottom" [attr.data-content]="question.tooltip"
+          class="tooltipImage">
+          <img src="./assets/images/Ayuda.png" style="width: 15px">
+        </button>
+        <!-- <img src="./assets/images/Ayuda.png" class="tooltipImage" style="width: 15px; cursor: pointer;" title="{{question.tooltip}}"> -->
+      </div>
+
+      <div class="col-xs-5 col-sm-6 col-lg-6 ">
+        <!-- <span class="col-xs-2 col-sm-2 simboloscolor"></span> -->
+        <input [formControlName]="question.key" #texto onlyNumbers="true" class="col-xs-11 col-sm-11 textInput" [id]="question.key"
+          type="tel" (change)="eventValidText($event)" (keyup)="eventValidText($event)" [min]="question.minValue" [max]="question.maxValue">
+        <span class="col-xs-1 col-sm-1 col-lg-1 simboloscolor">&nbsp;{{question.simbolo}}</span>
+      </div>
+
+    </div>
+    <div *ngSwitchCase="'dropdown'" Class="form-group">
+      <div class="col-xs-7 col-sm-7  col-md-6 col-lg-6 ">
+        <label class=" labelsDinamicos">{{question.label}}
+
+        </label>
+        <button type=button title="hi" data-toggle="tooltip" data-placement="bottom" [attr.data-content]="question.tooltip" class="tooltipImage">
+          <img src="./assets/images/Ayuda.png" style="width: 15px">
+        </button>
+
+      </div>
+      <div class="col-xs-5 col-sm-6 col-lg-6">
+        <select [id]="question.key" [formControlName]="question.key">
+          <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'slider'" Class="form-group">
+      <div class="col-xs-7 col-sm-7  col-md-6 col-lg-6">
+        <label class=" labelsDinamicos" style="padding-top: 15px !important">{{question.label}}
+        </label>
+        <button type=button data-toggle="tooltip" title="{{question.tooltip}}" data-placement="bottom" [attr.data-content]="question.tooltip"
+          class="tooltipImage">
+          <img src="./assets/images/Ayuda.png" style="width: 15px">
+        </button>
+
+      </div>
+      <div class="col-xs-5 col-sm-6 col-lg-6">
+        <!-- <span class="col-xs-1 col-sm-1 simboloscolor"></span> -->
+        <!-- <form [formGroup]="'form'+question.key"> -->
+        
+        <input  [formControlName]="question.key" type="number" class="col-xs-9 col-sm-9 col-lg-10 colorTxtSlider" #txtSlider id="txt{{question.key}}" [value]="slider.value"
+          [attr.maxlength]="question.maxlength" (change)="KeyonchangeSlr(slider ,$event,txtSlider )" (keyup)="KeyonchangeSlr(slider ,$event, txtSlider)"
+          onlyNumbers="true"  >
+        <span class="col-xs-3 col-sm-3  col-lg-2 simboloscolor">&nbsp;{{question.textMedida}}</span>
+
+
+        <div class="col-xs-12 col-sm-12 col-lg-12" style="margin-bottom:-15px">
+          <div class="slidecontainer">
+
+            <nouislider [formControlName]="question.key" [connect]="true" [attr.start]="question.value" [attr.name]="question.key" [min]="question.minValue" [max]="question.maxValue"
+              [step]="question.step" #slider [(ngModel)]="question.value" [id]="question.key" (change)="onchangeSlr(slider,txtSlider)"></nouislider>
+
+            <div class="col-xs-6 col-sm-6 col-lg-6 txtSliderOpcMin">
+              <span>{{question.minValue}}</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-lg-6 txtSliderOpcMax">
+              <span>{{question.maxValue}}</span>
+            </div>
+          </div>
+          <br>
+          <br>
+        </div>
+      <!-- </form> -->
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'currency'" Class="form-group">
+
+      <div class="col-xs-7 col-sm-7  col-md-6 col-lg-6">
+        <label class=" labelsDinamicos">{{question.label}}
+        </label>
+        <button type=button data-toggle="tooltip" title="{{question.tooltip}}" data-placement="bottom" [attr.data-content]="question.tooltip"
+          class="tooltipImage">
+          <img src="./assets/images/Ayuda.png" style="width: 15px">
+
+        </button>
+
+      </div>
+
+      <div id="divCurrency" class="col-xs-5 col-sm-6 col-lg-6 " style="text-align: left;">
+        <span class="col-xs-1 col-sm-1 col-md-1 col-lg-1 simboloscolorcurrency color">{{question.simboloMoneda}}</span>
+        <input [formControlName]="question.key" class="col-xs-11 col-sm-11 col-lg-11 textInput" [id]="question.key" type="tel"
+          [max]="question.maxValue" [min]="question.minValue" #txtCurrency [value]="question.value" [step]="question.step"
+          [attr.maxlength]="question.maxlength" onlyNumbers="true" (keyup)="onchangeVerificaReglasCurrency($event)" (focus)="onFocusCurrency(txtCurrency)"
+          (focusout)="focusoutCurrency(txtCurrency)" >
+
+        <div style="text-align: right;padding-right:2%;">
+          <i  > 
+            <img src="./assets/images/menos.png" style="width: 15px" (click)="minusInversionInicial(txtCurrency)">
+          </i>
+          <i > 
+              <img src="./assets/images/mas.png" style="width: 15px" (click)="plusInversionInicial(txtCurrency, question)">
+          </i>
+        </div>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'radio'" name="componentRadio" Class="form-group">
+<div class="col-xs-12 col-sm-12 col-md-12  col-lg-6">
+      <label class=" labelsDinamicos">{{question.label}}
+      </label>
+      <button type=button data-toggle="tooltip" title="{{question.tooltip}}" data-placement="bottom" [attr.data-content]="question.tooltip"
+          class="tooltipImage">
+          <img src="./assets/images/Ayuda.png" style="width: 15px">
+        </button>
+    </div>
+
+
+    
+      <div class="col-xs-12 col-sm-12 col-lg-6 ">
+        <div class=" col-xs-12 col-sm-12  col-md-12 col-lg-12 ">
+          <div *ngFor="let option of question.options" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 labelInput" style="float:right;">
+            <span class="labelRadio ">{{option.label}}</span>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-12 col-lg-12 ">
+          <div *ngFor="let option of question.options ; let i = index;" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="text-align: center; float:right;">
+
+            <label class="radio inline">
+              <input type="radio" [id]="question.key" [attr.dataIndex]="'radio'+question.key +i" [name]="question.key" [attr.special]="option.special"
+                [formControlName]="question.key" [value]="option.value" #radio (change)="selectedRadio(radio,RadioText)" checked>
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div *ngFor="let option of question.options; let i = index;" class="col-xs-3 col-sm-3 col-md-3 col-lg-3  " style="text-align: center; float: right;">
+
+            <span *ngIf="option.special != true" class="labelRadio"> {{option.value}}%</span>
+
+            <span *ngIf="option.special">
+              <span *ngIf="visibilityRadio != 'visible'" class="labelRadio"> {{ option.value}}%</span>
+
+              <input *ngIf="visibilityRadio == 'visible'" type="text" class="col-xs-4 col-sm-4  col-md-4 col-lg-4 col-xs-offset-3  col-sm-offset-3  col-md-offset-3 col-lg-offset-3 labelRadio"
+                #RadioText onlyNumbers="true" [attr.maxlength]="4" [value]="option.value" [min]="question.minValue" [max]="question.maxValue"
+                (keyup)="onchageRadioText($event,question.key, option ,question.key+i)" [ngStyle]="{'visibility':visibilityRadio}">
+              <span *ngIf="visibilityRadio == 'visible'" class="col-xs-1 col-sm-1 col-lg-1 labelRadio"> %</span>
+            </span>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+
+</div>
+<!-- </div> -->

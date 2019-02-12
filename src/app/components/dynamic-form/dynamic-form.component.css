@@ -1,0 +1,8 @@
+.form-control{
+    border: none !important;
+    height: 45px;
+    display: relative !important;
+}
+.form-group{
+    margin-bottom:0px !important;
+}

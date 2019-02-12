@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<!-- viewport meta to reset iPhone inital scale -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formulario de contacto</title>
+<!-- css3-mediaqueries.js for IE8 or older -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<style type="text/css">
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.contact_form h2, .contact_form label {font-family:'FuturaBold', Times, "Times New Roman", serif !important;}
+.form_hint, .required_notification {font-size: 11px;}
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+.contact_form li{
+    padding:12px; 
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+.contact_form li:first-child, .contact_form li:last-child {
+    border-bottom:1px solid #777;
+}
+.contact_form label {
+    width:150px;
+    margin-top: 3px;
+    display:inline-block;
+    float:left;
+    padding:3px;
+}
+.contact_form input, select {
+    height:25px; 
+    width:220px; 
+    padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:156px;}
+.contact_form input, .contact_form select, .contact_form textarea { 
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:4px;
+}
+.contact_form input:focus, .contact_form select:focus, .contact_form textarea:focus {
+    background: #fff; 
+    border:1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+}
+
+#btnContactenos {
+  color: #fff;
+  background-color: #ff9900 !important;
+  border-color: #ff9900 !important;
+  border-radius: 0px;
+  margin-top: 10px; 
+  margin-bottom: 5px;
+  box-shadow: inset 0px 0px 0px 0px #ff9900;
+}
+
+/* Button Style */
+button.submit {
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 0px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer; 
+}
+button.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset; 
+    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+</style>
+</head>
+<body>
+<form action="https://cs11.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" class="contact_form">
+<ul>
+	<!-- <li> -->
+<input type=hidden name="orgid" value="00DZ000000Mikn5">
+<!-- </li>
+<li> -->
+<input type=hidden name="retURL" value="http://">
+<!-- </li> -->
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
+<!--  los comentarios de estas líneas si desea realizar una prueba en el      -->
+<!--  modo de depuración.                                                     -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="mduran@oldmutual.com.co">                                        -->
+<!--  ----------------------------------------------------------------------  -->
+<li>
+<label for="name">Nombre del contacto</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+</li>
+<li>
+<label for="tipoidentificacion">Tipo Documento:</label><select  id="00NA0000001lssk" name="00NA0000001lssk" title="Tipo Documento caso WEB"><option value="">--Ninguno--</option><option value="Cedula Ciudadania">Cedula Ciudadania</option>
+<option value="Pasaporte">Pasaporte</option>
+<option value="Nit">Nit</option>
+</select><br>
+</li>
+<li>
+<label for="nuidentificacion">Número documento:</label><input  id="00NA0000001lsuq" maxlength="50" name="00NA0000001lsuq" size="20" type="text" /><br>
+</li>
+<li>
+<label for="email">Correo electrónico</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+</li>
+<li>
+<label for="phone">Teléfono</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+</li>
+<li>
+<label for="subject">Asunto</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+</li>
+<li>
+<label for="description">Descripción</label><textarea name="description" style="width: 220px;"></textarea><br>
+</li>
+<li>
+    <input id="btnContactenos" class="btn btn-principal" type="submit" name="submit" value="Contactenos">
+    <input type="hidden"  id="external" name="external" value="1" />
+</li>
+</ul>
+</form>
+</body>
+</html>

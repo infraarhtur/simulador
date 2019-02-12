@@ -1,0 +1,215 @@
+{
+  "textosGenerales": {
+    "preTitulo": "Simulador de  ",
+    "titulo": "libertad financiera",
+    "disclaimer": "Disclaimer1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ExcepteurDisclaimer1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud",
+    "disclaimerFinal": "Disclaimer1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ExcepteurDisclaimer1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ",
+    "textoRentaMensual": "su renta mensual sera de",
+    "textoRentaMensualCero": "la renta es cero de"
+  },
+  "emailConfig": {
+    "MicroSiteCode": "PA",
+    "FormCode": "SC",
+    "from": "informacionoldmutual@oldmutual.com.co",
+    "KeyType": "1",
+    "Recipient": "Apreciado #contactoName , su información ha sido recibida, pronto nos contactaremos con usted",
+    "urlServicio": "https://190.216.128.52/SkCo.EnablingAdviceApi/api/SaveSuscription",
+    "isButtonVisible": true
+
+  },
+
+  "dinamicControls": [
+
+    {
+      "controlType": "currency",
+      "key": "InversionInicial",
+      "label": "Inversión Inicial",
+      "value": "5.000.000",
+      "type": "text",
+      "order": 1,
+      "minValue": 1000,
+      "maxValue": 1000000000,
+      "step": 1000000,
+      "maxlength": 11,
+      "tooltip": "Inversión Inicial",
+      "simboloMoneda": "$",
+      "formulas": [{
+          "Fomula": "acumulacion",
+          "position": "3"
+        },
+        {
+          "Fomula": "desacumulacion",
+          "position": "2"
+        }
+      ]
+
+    },
+    {
+      "controlType": "currency",
+      "key": "AporteMensual",
+      "label": "Aporte Mensual",
+      "value": "1.000.000",
+      "type": "text",
+      "order": 2,
+      "minValue": 100,
+      "maxValue": 1000000000,
+      "step": 1000000,
+      "maxlength": 11,
+      "tooltip": "Aporte Mensual",
+      "simboloMoneda": "$",
+      "formulas": [{
+        "Fomula": "acumulacion",
+        "position": "2"
+      }]
+
+    },
+
+    {
+      "controlType": "textbox",
+      "key": "IngrementoAnual",
+      "label": "Incremento Anual",
+      "order": 3,
+      "minValue": 0,
+      "maxValue": 100,
+      "tooltip": "Incremento Anual",
+      "value": 5,
+      "simbolo": "%",
+      "formulas": [{
+        "Fomula": "acumulacion",
+        "position": "4"
+      }]
+    },
+
+    {
+      "controlType": "slider",
+      "key": "PlazoAcumulacion",
+      "label": "Plazo Acumulación",
+      "value": "11",
+      "type": "range",
+      "order": 4,
+      "minValue": 0,
+      "maxValue": 50,
+      "step": 1,
+      "maxlength": 3,
+      "tooltip": "Plazo Acumulación",
+      "textMedida": "Años",
+      "formulas": [{
+          "Fomula": "acumulacion",
+          "position": "1"
+        },
+        {
+          "Fomula": "desacumulacion",
+          "position": "3"
+        }
+      ]
+    },
+    {
+      "controlType": "radio",
+      "key": "PerfilAcumulacion",
+      "label": "Perfil Acumulación",
+      "type": "radio",
+      "minValue": "0.0",
+      "maxValue": "50",
+
+      "options": [{
+          "label": "Conservador",
+          "value": "7",
+          "special": false
+        },
+        {
+          "label": "Moderado",
+          "value": "2.9",
+          "special": false
+        },
+
+        {
+          "label": "otro",
+          "value": "10",
+          "special": true
+        }
+      ],
+      "value": "7",
+      "order": 4,
+      "tooltip": "este es un tooltip de prueba",
+      "formulas": [{
+          "Fomula": "acumulacion",
+          "position": "0"
+        }
+
+      ]
+    },
+    {
+      "controlType": "slider",
+      "key": "PlazoDesacumulacion",
+      "label": "Plazo Desacumulación",
+      "value": "5",
+      "type": "range",
+      "order": 7,
+      "minValue": 5,
+      "maxValue": 50,
+      "step": 1,
+      "maxlength": 3,
+      "tooltip": "Plazo Desacumulación",
+      "textMedida": "Años",
+      "formulas": [{
+          "Fomula": "desacumulacion",
+          "position": "1"
+        },
+        {
+          "Fomula": "acumulacion",
+          "position": "5"
+        },
+        {
+          "Fomula": "pago",
+          "position": "1"
+        }
+      ]
+    },
+    {
+      "controlType": "radio",
+      "key": "Perfildesacumulación",
+      "label": "Perfil Desacumulación",
+      "minValue": "0.0",
+      "maxValue": "50",
+      "type": "radio",
+      "options": [{
+          "label": "Conservador",
+          "value": "7",
+          "special": false
+        },
+        {
+          "label": "moderado",
+          "value": "2.9",
+          "special": false
+        },
+        {
+          "label": "agresivo",
+          "value": "1.9",
+          "special": false
+        },
+        {
+          "label": "otro",
+          "value": "0.0",
+          "special": true
+        }
+      ],
+
+      "value": "7",
+      "order": 5,
+      "tooltip": "Perfil Desacumulación",
+      "formulas": [{
+          "Fomula": "desacumulacion",
+          "position": "0"
+        },
+        {
+          "Fomula": "pago",
+          "position": "0"
+        }
+
+      ]
+    }
+
+
+  ]
+
+}

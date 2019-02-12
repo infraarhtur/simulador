@@ -1,0 +1,614 @@
+/* You can add global styles to this file, and also import other style files*/
+
+@font-face {
+  font-family: "FuturaBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../assets/fonts/futura/bold/FuturaStd-Bold.eot");
+  src: url("../assets/fonts/futura/bold/FuturaStd-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/futura/bold/FuturaStd-Bold.woff") format("woff"), url("../assets/fonts/futura/bold/FuturaStd-Bold.ttf"), url("../assets/fonts/futura/bold/FuturaStd-Bold.svg#FuturaStd-Bold") format("svg");
+}
+
+@font-face {
+  font-family: "FuturaBook";
+  src: url("../assets/fonts/futura/book/FuturaStd-Book.ttf");
+}
+
+body {
+  font-family: 'FuturaBook';
+}
+
+.highcharts-root {
+  font-family: 'FuturaBook', monospace !important;
+  font-size: 12px;
+}
+
+/* Series acumulacion ahorro 1*/
+
+g.highcharts-series.highcharts-series-0.highcharts-area-series.highcharts-color-0 .highcharts-area {
+  fill: #006150;
+}
+
+g.highcharts-series.highcharts-series-0.highcharts-area-series.highcharts-color-0 .highcharts-graph {
+  stroke: none;
+}
+
+/* Series desacumulacion ahorro 1*/
+
+g.highcharts-series.highcharts-series-1.highcharts-area-series.highcharts-color-1 .highcharts-area {
+  fill: #4d9184;
+  opacity: 0.75;
+}
+
+g.highcharts-series.highcharts-series-1.highcharts-area-series.highcharts-color-1 .highcharts-graph {
+  stroke: none;
+}
+
+/* Series acumulacion rendimientos 1*/
+
+g.highcharts-series.highcharts-series-2.highcharts-area-series.highcharts-color-2 .highcharts-area {
+  fill: #6EAB24;
+}
+
+g.highcharts-series.highcharts-series-2.highcharts-area-series.highcharts-color-2 .highcharts-graph {
+  stroke: none;
+}
+
+/* Series desacumulacion rendimientos 2*/
+
+g.highcharts-series.highcharts-series-3.highcharts-area-series.highcharts-color-3 .highcharts-area {
+  fill: #9bc466;
+  opacity: 0.75;
+}
+
+g.highcharts-series.highcharts-series-3.highcharts-area-series.highcharts-color-3 .highcharts-graph {
+  stroke: none;
+}
+
+/* Icono leyenda ahorro */
+
+.highcharts-point.highcharts-color-0,
+.highcharts-legend-item.highcharts-color-0 .highcharts-point,
+.highcharts-color-0 {
+  fill: #6EAB24;
+}
+
+/* Icono leyenda rendimientos */
+
+.highcharts-point.highcharts-color-2,
+.highcharts-legend-item.highcharts-color-2 .highcharts-point,
+.highcharts-color-2 {
+  fill: #006150;
+}
+
+/* Tamaño y fuente de la leyenda de las series */
+
+.highcharts-legend text {
+  font-family: "FuturaBook";
+}
+
+/* Circulo de datos */
+
+circle#cirMtt {
+  fill: #00A7CA;
+}
+
+/* Linea de datos */
+
+rect#lineaV2 {
+  fill: #00A7CA;
+}
+
+.periodoLb {
+  font-family: "FuturaBold";
+}
+
+.subSerieLb {
+  font-family: "FuturaBook";
+}
+
+.montoLb {
+  font-family: "FuturaBold";
+}
+
+.periodoLbHidden {
+  fill: #00A7CA;
+}
+
+/* div y estilos para centrar el contenido de las secciones en mobil de ahorro y rendimiento */
+
+div#tituloGrafica {
+  text-align: center;
+}
+
+.titMobSer1 {
+  color: #6EAB24;
+}
+
+.titMobSer2 {
+  color: #006150;
+}
+
+.titMobSer1,
+.titMobSer2 {
+  display: inline-block;
+  font-family: "FuturaBold";
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* simulador formulario */
+
+.preTitulo {
+  font-family: 'FuturaBook';
+  color: #6EAB24;
+}
+
+.titulo {
+  font-family: 'FuturaBold';
+  color: #006150;
+  font-size: 2.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.Disclaimer {
+  font-family: "FuturaBook" !important;
+  text-align: justify !important;
+  font-size: 12px !important;
+}
+
+.Disclaimerbottom {
+  font-family: "FuturaBook" !important;
+  text-align: justify !important;
+  font-size: 10px !important;
+}
+
+.subTitulo {
+  font-size: 20px;
+}
+
+.subTituloNuMerico {
+  font-family: 'FuturaBold';
+  color: #6EAB24;
+  font-size: 13px !important;
+}
+
+.color {
+  color: #6EAB24;
+}
+
+.colorTxtSlider {
+  color: black !important;
+}
+
+.labelsDinamicos {
+  font-family: 'FuturaBold';
+  font-weight: lighter;
+}
+
+text {
+  font-family: "FuturaBook" !important;
+}
+
+.labelRadio {
+  font-family: 'FuturaBook';
+  font-size: 1rem;
+}
+
+.labelInput {
+  text-align: center;
+}
+
+#divCurrency {
+  text-align: left;
+}
+
+.simboloscolorcurrency {
+  font-family: "FuturaBook" !important;
+  padding-left: 5px;
+}
+
+.simboloscolor {
+  font-family: "FuturaBook" !important;
+  padding-left: 5px;
+  text-align: right;
+}
+
+.textInput {
+  text-align: right;
+}
+
+.txtSliderOpcMin {
+  text-align: left;
+}
+
+.txtSliderOpcMax {
+  text-align: right;
+}
+
+/* SmartPhones */
+
+@media only screen and (max-width: 360px) {
+  .labelsDinamicos {
+    font-size: 3vw;
+  }
+  text {
+    font-size: 3vw;
+  }
+  .labelRadio {
+    font-size: 3vw;
+  }
+  .labelInput {
+    font-size: 3vw;
+  }
+  .simboloscolorcurrency {
+    font-size: 3vw;
+  }
+  .simboloscolor {
+    font-size: 3vw;
+  }
+  #divCurrency {
+    font-size: 3vw;
+  }
+  .textInput {
+    font-size: 3vw;
+  }
+  .colorTxtSlider {
+    font-size: 3vw;
+  }
+  .txtSliderOpcMin {
+    font-size: 3vw;
+  }
+  .txtSliderOpcMax {
+    font-size: 3vw;
+  }
+}
+
+/* modals */
+
+.tituloError {
+  font-family: 'FuturaBold';
+  color: #006150;
+  padding-left: 15px;
+}
+
+.contenido {
+  font-family: "FuturaBook";
+}
+
+#btnContactenos {
+  color: #fff;
+  background-color: #ff9900 !important;
+  border-color: #ff9900 !important;
+  border-radius: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 12px !important;
+}
+
+.labelInput span:last-child() {
+  text-align: right;
+  background-color: black;
+}
+
+.form-group {
+  margin-bottom: 0px !important;
+}
+
+.form-horizontal .form-group {
+  margin: 0px 0px -15px 0px !important;
+}
+
+input[type=range]::-ms-track {
+  width: 300px;
+  height: 5px;
+  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+  background: transparent;
+  /*leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+.tooltipImage {
+  font-size: 15px;
+  color: #00b0ca;
+  background-color: transparent;
+  border: 0px;
+  outline: 0 !important;
+}
+
+.popover {
+  background-color: #00A7CA !important;
+  border-color: #00A7CA !important;
+  border-radius: 7px;
+  box-shadow: none !important;
+}
+
+.popover-content {
+  background-color: #00A7CA;
+  color: #FFFFFF;
+  font-size: 12px;
+  border-radius: 7px;
+}
+
+/* Popover Arrow */
+
+.arrow {
+  border-bottom-color: #00A7CA !important;
+}
+
+.popover.bottom .arrow:after {
+  border-bottom-color: #00A7CA !important;
+}
+
+.modal-header {
+  background-color: #6EAB24;
+  color: #fff;
+}
+
+.modalVerticalCenter {
+  margin-top: 85% !important;
+}
+
+.modalVerticalCenterContacto {
+  margin-top: 18% !important;
+}
+
+.modalText {
+  FONT-SIZE: 12px !important;
+}
+
+.modaltitulo {
+  padding-top: 10px !important;
+  padding-left: 27px !important;
+}
+
+.noUi-connects {
+  background-color: #006150 !important;
+}
+
+/* .noUi-handle{
+  background:url('https://image.flaticon.com/icons/svg/61/61410.svg') !important;
+} */
+
+.noUi-handle {
+  border: 1px solid #cccccc !important;
+  border-radius: 5px !important;
+  background-color: #fff !important;
+  /* For Safari 5.1 to 6.0 */
+  background-image: url(./images/srverde.png) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer !important;
+  text-decoration: none;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB !important;
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+  background: none !important;
+}
+
+.noUi-horizontal {
+  height: 10px !important;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 30px !important;
+  height: 20px !important;
+}
+
+.noUi-handle {
+  border: 1px solid #006150 !important;
+  border-radius: 5px !important;
+  background-color: #006150 !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  cursor: pointer !important;
+  box-shadow: inset 0 0 1px #4d2a37, inset 0 1px 7px #006150, 0 3px 6px -3px #191a19 !important;
+}
+
+/* start cambios bootstrap */
+
+.modal.show .modal-dialog {
+  -webkit-transform: translate(0, 0) !important;
+  -ms-transform: translate(0, 0) !important;
+  -o-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important;
+}
+
+.fade.show {
+  opacity: 1 !important;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5 !important;
+}
+
+.modal-header .close {
+  padding: 20px !important;
+  margin: -10px -25px -25px !important;
+}
+
+/* end cambios bootstrap */
+
+.tooltip.bottom .tooltip-arrow {
+  border-top-color: #00A7CA !important;
+  border-bottom: 5px solid #00A7CA !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-bottom-color: #00A7CA !important;
+}
+
+.tooltip-inner {
+  background-color: #00A7CA !important;
+  color: white !important;
+}
+
+#frmContacto>.form-group {
+  margin-bottom: 10px !important;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(3.25rem + 2px) !important;
+}
+
+#tituloError {
+  padding-top: 10px !important;
+  padding-left: 29px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+@media only screen and (min-width: 1300px) {
+  .modalVerticalCenter {
+    margin-top: 70% !important;
+  }
+  .modalVerticalCenterContacto {
+    margin-top: 10% !important;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .modalVerticalCenter {
+    margin-top: 100% !important;
+  }
+  .modalVerticalCenterContacto {
+    margin-top: 45% !important;
+  }
+}
+
+/* estilos generales  que se estan pisando en produccion */
+
+.u-header {
+  font-size: 1.3rem !important;
+}
+
+.g-font-size-13 {
+  font-size: 1.4rem !important;
+}
+
+.h6,
+h6 {
+  font-size: 1.5rem !important;
+}
+
+.g-font-size-13 {
+  font-size: 1.2rem !important;
+}
+
+.g-font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.u-btn-outline-primary:hover {
+  color: #fff !important;
+  background-color: #6EAB24 !important;
+}
+
+.u-btn-outline-primary {
+  color: #6EAB24 !important;
+  border-color: #6EAB24 !important;
+  background-color: transparent !important;
+}
+
+#h2Title {
+  margin-top: 10px !important;
+}
+
+#lblPreGracias {
+  font-size: 12px !important
+}
+
+.navbar-collapse.in {
+  overflow-y: visible !important;
+}
+
+.navbar-collapse.in,
+.navbar-collapse.collapsing {
+  overflow-y: visible !important;
+}
+
+button.tooltipImage {
+
+  width: 15px !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+@media only screen and (min-width: 1024px) {
+  .labelRadio {
+    font-family: 'FuturaBook';
+    font-size: 0.85rem !important;
+  }
+}
+ @media (max-width: 992px) {
+  .labelsDinamicos{ font-size: 11px !important;}
+  .navbar-header {
+      float: none !important;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block !important;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent !important;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1) !important;
+  }
+  .navbar-fixed-top {
+      top: 0 !important;
+      border-width: 0 0 1px !important;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px !important;
+  }
+  .navbar-nav>li {
+      float: none !important;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px !important;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+} 
+
+/* 
+#divformularioGeneral{
+
+  @if  height <= 550{
+    #contenedorGrafica{
+      margin-top:20%;
+    }
+  }
+}
+
+
+@if(#divformularioGeneral (height <= 550) ){
+
+  #contenedorGrafica{
+    margin-top:20%;
+  }
+} */
+
+

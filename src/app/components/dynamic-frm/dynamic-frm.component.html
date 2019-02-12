@@ -1,0 +1,219 @@
+
+
+
+
+<!-- Modal  Error-->
+<div class="modal fade" id="ErrorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content modalVerticalCenter">
+
+      <div class="row ">
+        <div class="col-xs-3 col-sm-3 col-md-3 " style="padding-top: 10px; padding-left: 27px;">
+          <span class="tituloError ">Error</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+
+          <div class="col-xs-3 col-sm-3 col-md-3 ">
+            <img #imageError src="./assets/images/Error.png" width="70" height="70">
+
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8  Disclaimer modalText">
+            <label class="Disclaimer modalText"> No podemos cargar la información del simulador. Por favor intenta más tarde</label>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal  Alert-->
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content modalVerticalCenter">
+      <!-- <div class="modal-header center "> -->
+      <div class="row ">
+        <div class="col-xs-3 col-sm-3 col-md-3 modaltitulo">
+          <span class="tituloError " style="padding-top: 10px;">Alerta</span>
+        </div>
+      </div>
+      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+      <!-- </div> -->
+      <div class="modal-body">
+        <div class="row">
+
+          <div class="col-xs-3 col-sm-3 col-md-3 ">
+            <img #imageError src="./assets/images/Alerta.png" width="70" height="70">
+
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8  Disclaimer modalText">
+            <label class="Disclaimer modalText"> El valor ingresado no cumple con el rango permitido, el valor debe ser máximo de {{alertValorMaximo}} </label>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal  Alert 2-->
+<div class="modal fade" id="alertModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content modalVerticalCenter">
+      <!-- <div class="modal-header center "> -->
+      <div class="row ">
+        <div class="col-xs-3 col-sm-3 col-md-3  modaltitulo">
+          <span class="tituloError " style="padding-top: 10px; ">Alerta</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+
+          <div class="col-xs-3 col-sm-3 col-md-3 ">
+            <img #imageError src="./assets/images/Alerta.png" width="70" height="70">
+
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8  Disclaimer modalText">
+            <label class="Disclaimer modalText"> El valor ingresado no cumple con el rango permitido, el valor debe ser mínimo de {{alertValorMinimo}}</label>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="FormularioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modalVerticalCenterContacto ">
+      <div class="modal-header center" style="vertical-align: center;">
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 ">
+          <h5>FORMULARIO DE CONTACTO</h5>
+        </div>
+
+        <button type="button" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="padding: 5px">
+        <app-frm-contacto id="info" name="info" seamless="" height="450px" width="100%"></app-frm-contacto>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal  Saludo-->
+<div class="modal fade" id="GraciasModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content modalVerticalCenter" style="height: 175px !important;">
+      <!-- <div class="modal-header center "> -->
+      <div class="modal-body" style="height: 175px !important; padding-left: 5px !important; padding-right: 5px !important">
+        <div class="row col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 col-lg-offset-2">
+          <h2 class="center" id="h2Title">
+            <span class="titulo">GRACIAS</span>
+            <br>
+            <strong>
+              <span class="preTitulo" id="lblPreGracias">POR CONTACTARNOS</span>
+            </strong>
+          </h2>
+        </div>
+
+        <div class="">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 Disclaimer center  " style="text-align: center !important">
+            <label class="Disclaimer" style="text-align: center !important"> Pronto daremos respuesta a su solicitud</label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <!-- <img #imageError src="./assets/images/srverde.png" width="10" height="10"> -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12 fluidGeneralTable">
+      <h2 class="center">
+        <span class="preTitulo">{{preTitulo}} </span>
+        <strong>
+          <span class="titulo"> {{titulo}}</span>
+        </strong>
+      </h2>
+    </div>
+    <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12  fluidGeneralTable Disclaimer">
+      <span class="Disclaimer">{{texto1}}</span>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="hidden-xs col-sm-4 col-md-4 col-lg-4 fluidGeneralTable">
+      <!-- ESTO VA VACIO -->
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8  fluidGeneralTable">
+    </div>
+
+    <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 fluidGeneralTable2" id="divformularioGeneral">
+      <br>
+      <!--aqui va el formulario -->
+      <app-dynamic-form [questions]="questions" class="form-group grupo" (changesResponse)="changeResponse($event)"></app-dynamic-form>
+      <!-- Button trigger modal -->
+      <div id="divContactenos" class="" *ngIf="isContactenosVisible" _ngcontent-c4>
+        <button type="button" class="btn btn-primary" style="float: right;" id="btnContactenos" (click)="modalContactenos()">
+          Contáctenos
+        </button>
+      </div>
+
+      <!-- end formulario -->
+    </div>
+    <!-- display: table;  height:200px -->
+    <div id="contenedorGrafica" class="col-xs-12 col-sm-12 col-md-6 col-lg-6   fluidGeneralTable" >
+      <!-- grafica -->
+
+      <!-- [ngStyle]="{'vertical-align': strMiddle ,'line-height':alturaString }" -->
+
+      <div [hidden]="!isvisibleGrafica">
+        <app-grafica [seriesResponseGraph]="response"></app-grafica>
+      </div>
+    </div>
+    <!-- end grafica -->
+
+
+
+    <div class="hidden-sm hidden-md  col-xs-12 hidden-lg fluidGeneralTable2">
+      <div>
+
+        <!-- aqui va el componente de form inicial -->
+        <app-dynamic-form [questions]="questions" class="form-group grupo" (changesResponse)="changeResponse($event)"></app-dynamic-form>
+
+        <div id="divContactenos2" *ngIf="isContactenosVisible">
+          <button type="button" class="btn btn-primary" style="" id="btnContactenos" (click)="modalContactenos()">
+            Contáctenos
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 fluidGeneralTable Disclaimerbottom">
+      <span class="Disclaimerbottom">{{texto2}}</span>
+
+    </div>
+
+  </div>
+</div>

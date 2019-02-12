@@ -1,0 +1,95 @@
+<div id="divContactenos">
+    <!-- ngNoForm -->
+  <form id="frmContacto"    #contacForm (ngSubmit)="onSubmit()" class="contact_form form-horizontal">
+    <input type=hidden name="orgid" value="00DZ000000Mikn5">
+
+    <input type=hidden name="retURL" value="http://">
+
+    <div class="form-group row">
+      <label for="" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Nombre del contacto</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input #name="ngModel" [(ngModel)]="objContacto.name"  id="name" name="name"  maxlength="80" size="20" type="text" class="form-control "  />
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+      <label for="tipoidentificacion" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Tipo Documento:</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <select #documentType="ngModel" [(ngModel)]="objContacto.documentType" id="00NA0000001lssk" name="00NA0000001lssk" class="form-control"
+          title="Tipo Documento caso WEB">
+          <option value="">--Ninguno--</option>
+          <option value="Cedula Ciudadania">Cedula Ciudadania</option>
+          <option value="Pasaporte">Pasaporte</option>
+          <option value="Nit">Nit</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class=" form-group row">
+
+      <label for="nuidentificacion " class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Número documento:</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input #documentNumber="ngModel" [(ngModel)]="objContacto.documentNumber" id="00NA0000001lsuq" maxlength="50" name="00NA0000001lsuq"
+          size="20" type="text" class="form-control textInput" />
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+
+
+      <label for="email" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Correo electrónico</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input #email="ngModel" [(ngModel)]="objContacto.email" id="email" maxlength="80" name="email" size="20" type="text" class="form-control"
+        />
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+      <label for="phone" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4 ">Teléfono</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input #phone="ngModel" [(ngModel)]="objContacto.phone" id="phone" maxlength="40" name="phone" size="20" type="text" class="form-control"
+        />
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+      <label for="subject" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Asunto</label>
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input #subject="ngModel" [(ngModel)]="objContacto.subject" id="subject" maxlength="80" name="subject" size="20" type="text"
+          class="form-control" />
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+
+      
+        <label for="description" class="Disclaimer col-lg-4 col-xs-4 col-sm-4 col-md-4">Descripción</label>
+     
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <textarea #description="ngModel" [(ngModel)]="objContacto.description" name="description" class="form-control"></textarea>
+      </div>
+
+    </div>
+
+    <div class="form-group row">
+
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <input id="btnContactenos" class="btn btn-principal" type="submit" name="submit" value="Contáctenos">
+        <input type="hidden" id="external" name="external" value="1" />
+      </div>
+
+    </div>
+  </form>
+</div>

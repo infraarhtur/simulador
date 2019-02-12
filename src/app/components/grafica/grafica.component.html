@@ -1,0 +1,23 @@
+
+  <div *ngIf="rentaMensual.plazoRenta" id="tituloGrafica">
+    <span class="subTitulo Disclaimer">{{textoRentaMensual}}</span>
+    <span class="subTituloNuMerico">${{rentaMensual.renta }} </span>
+    <span class="subTitulo Disclaimer"> por</span>
+    <span class="subTituloNuMerico"> {{rentaMensual.plazoRenta}} AÑOS </span>
+
+    <div *ngIf="isMobile" id="tituloGraficaMob">
+      <div class="titMobSer1"><div>{{ahorroSerieName}}:</div><div>$ {{ahorroMb}}</div></div>
+      <div class="titMobSer2"><div>{{rendimientosSerieName}}:</div><div>$ {{rendimientoMb}}</div></div>
+    </div>
+  </div>
+  <div *ngIf="!rentaMensual.plazoRenta" id="tituloGrafica">
+    <span class="subTitulo Disclaimer">{{textoRentaMensualCero}}</span>
+    <span class="subTituloNuMerico">${{rentaMensual.renta }} </span>
+
+    <div *ngIf="isMobile" id="tituloGraficaMob">
+      <div class="titMobSer1"><div>{{ahorroSerieName}}:</div><div>$ {{ahorroMb}}</div></div>
+      <div class="titMobSer2"><div>{{rendimientosSerieName}}:</div><div>$ {{rendimientoMb}}</div></div>
+    </div>
+  </div>
+  <div id="containerGrafica"></div>
+
